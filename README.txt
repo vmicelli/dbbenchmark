@@ -29,8 +29,8 @@ property com.vin.dbbenchmark.manager.DbBenchmarkManager.numOfSelectExecutions.
 
 WARMUP 
 
-Before the actual executions, the application perform a number Z of warmup 
-execution. Warmup executions are identical to the test that is going to be 
+Before the actual executions, the application performs a number Z of warmup 
+executions. Warmup executions are identical to the test that is going to be 
 performed, but the times collected are not considered in the actual statistics.
 The Z value can be configured in the configuration.properties file using the 
 property com.vin.dbbenchmark.manager.DbBenchmarkManager.numOfWarmupExecutions.
@@ -45,7 +45,7 @@ BenchmarkManager (DbBenchmarkManager) to execute the tests.
 
 BenchmarkManager is a generic class with the logic to execute tests and print 
 test results. This class is extended by DbBenchmarkManager which performs the 
-needed initialization (creation of test table and Tester classes which will 
+needed initialization (creates the test table and adds Tester classes which will 
 actually exec the tests).
 
 BenchmarkManager classes have a set of "tester" classes and iterate over them 
@@ -54,22 +54,22 @@ The testers are classes that implement the Tester interface.
 They have methods to execute tests, get results, and get info about the test 
 being performed (name and general info).
 
-The project includes the abstract class BaseTester an implementation of Tester 
-which implement the main logic to perform a specific number of test iterations, 
-collect execution times and statistics.
+The project includes the abstract class BaseTester, an implementation of Tester, 
+which implements the main logic to perform a specific number of test iterations and 
+collects execution times and statistics.
 
-DbTester extends BaseTester to implement init/finish functions to open/close 
+The class DbTester extends BaseTester to implement init/finish functions to open/close 
 connection to db. DbInsertTester and DbSelectTester extend DbTester to actually
 execute the statemens.
-Db testers uses implementations of the abstract class DbHelper 
+Db testers use implementations of the abstract class DbHelper 
 (PostgreSqlDbHelper and SqlServerDbHelper) to connect to db and execute prepared
 statements using the PreparedStatement API.
 
 The configuration of the application is read from the file 
-configuration.properties (which resides in reside in src/main/resources folder) 
+configuration.properties (which resides in src/main/resources folder) 
 by the object ConfigurationHelper.
 
-The application also includes a sample test for the class BaseTester.
+The application also includes a sample test (BaseTesterTest) for the class BaseTester.
 
 NOTE
 
@@ -105,9 +105,10 @@ java -cp target/dbbenchmark-1.0-SNAPSHOT.jar;lib/* com.vin.dbbenchmark.app.DbBen
 
 (folder lib contains postgresql and sql server jdbc drivers )
 
+
 Alternatively open the project using NetBeans.
 
-When you exec the application you should see an output like this:
+When you exec the application you should see an output like the following:
 
 
 Executing tester: Insert Statements
