@@ -92,6 +92,9 @@ so exec the following command to install it in the local repository:
 
 mvn install:install-file -Dfile=lib/sqljdbc4-4.2.jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc4 -Dversion=4.2 -Dpackaging=jar
 
+Then open the file configuration.properties (in folder src/main/resources) to 
+setup the data for db connection and the number of statements to execute.
+
 Then exec the command:
 
 mvn package
