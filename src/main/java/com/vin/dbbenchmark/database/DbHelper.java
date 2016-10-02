@@ -229,7 +229,7 @@ public abstract class DbHelper{
     /**
      * Exec the insert batch and commit.
      * 
-     * @throws SQLException
+     * @throws SQLException Throws sql exceptions
      */
     public void execInsertDataBatch() throws SQLException  {
         try {

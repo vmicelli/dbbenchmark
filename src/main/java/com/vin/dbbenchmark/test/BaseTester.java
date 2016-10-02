@@ -48,8 +48,8 @@ public abstract class BaseTester implements Tester{
     
     /**
      *
-     * @param numOfExecutions It is the number of times that the {@link #execTest() execTest} method is executed in order to collect statistical results
-     * @param numOfWarmupExecutions It is the number of times that the {@link #execTest() execTest} method is executed for warmup purposes
+     * @param numOfExecutions It is the number of times that the {@link #execTest(State state) execTest} method is executed in order to collect statistical results
+     * @param numOfWarmupExecutions It is the number of times that the {@link #execTest(State state) execTest} method is executed for warmup purposes
      */
     public BaseTester(int numOfExecutions,int numOfWarmupExecutions)
     {
@@ -278,7 +278,7 @@ public abstract class BaseTester implements Tester{
     }
     
     /**
-     * This state is passed through methods {@link #beforeTest() beforeTest}, {@link #execTest() execTest} and {@link #afterTest() afterTest}.
+     * This state is passed through methods {@link #beforeTest(State state) beforeTest}, {@link #execTest(State state) execTest} and {@link #afterTest(State state) afterTest}.
      * Subclasses can extend this object to add other attributes to pass through the 3 methods.
      * {@link BaseTester} has the factory {@link #makeState() makeState} that subclasses can override to create their own state object.  
      * 

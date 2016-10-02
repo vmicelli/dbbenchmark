@@ -37,8 +37,8 @@ public abstract class DbTester extends BaseTester{
     /**
      *
      * @param dbmsName It is the name of the database to be used. It is an enum and can have values POSTGRE_SQL and SQL_SERVER
-     * @param numOfExecutions It is the number of times that the {@link #execTest() execTest} method is executed in order to collect statistical results
-     * @param numOfWarmupExecutions It is the number of times that the {@link #execTest() execTest} method is executed for warmup purposes
+     * @param numOfExecutions It is the number of times that the {@link #execTest(State state) execTest} method is executed in order to collect statistical results
+     * @param numOfWarmupExecutions It is the number of times that the {@link #execTest(State state) execTest} method is executed for warmup purposes
      */
     public DbTester(DBMSName dbmsName, int numOfExecutions,int numOfWarmupExecutions) {
         super(numOfExecutions,numOfWarmupExecutions);
