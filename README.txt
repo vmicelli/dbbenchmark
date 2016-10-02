@@ -83,6 +83,11 @@ A well known framework is JMH http://openjdk.java.net/projects/code-tools/jmh/
 An interesting reading on the topic from Oracle website: 
 http://www.oracle.com/technetwork/articles/java/architect-benchmarking-2266277.html.
 
+As an example of using JMH, I've developed a slightly modified version of this Java 
+application that executes the same benchmarks using JMH.
+You can find it at the following link:
+https://github.com/vmicelli/jmhdbbenchmark
+
 
 COMPILE AND RUN
 
